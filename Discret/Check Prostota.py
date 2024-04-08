@@ -2,7 +2,7 @@ import math
 
 def is_prime(n):
     # Проверяет, является ли число n простым.
-    if n <= 1:
+    if n < 1:
         return False
     if n <= 3:
         return True
@@ -16,8 +16,9 @@ def is_prime(n):
     return True
 
 # Пример использования:
-number = int(input("Введите число для проверки на простоту: "))
-if is_prime(number):
-    print(number, "является простым числом.")
-else:
-    print(number, "не является простым числом.")
+while True:
+    number = int(input("Введите число для проверки на простоту: "))
+    if is_prime(number):
+        print(number, "является простым числом.")
+    else:
+        print(number, "не является простым числом.")
